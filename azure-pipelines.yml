@@ -9,9 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-trigger:
-- master
-
 variables:
   imageName: 'pccs-docker'
 
