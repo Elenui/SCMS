@@ -45,20 +45,19 @@
  </div>
 
  <div class="h-100 p-4">
-     <p class="h1">Mes Websites :</p>
+     <p class="h1">Expiration des certificats par site  :</p>
      <table class="table">
       <thead>
       <tr>
-          <th>URL</th>
+          <th>Domain</th>
           <th>Status</th>
-          <th>Expires</th>
       </tr>
       </thead>
       <tbody>
       {% for website in websites %}
       <tr>
-          <td> {{ website['web_url'] }}</td>
-          <td>To do</td>
+          <td> {{ website }}</td>
+          <td><button class="button {{ websites[website] }} disabled">{{ websites[website] }}</button></td>
       </tr>
       {% endfor %}
       </tbody>
