@@ -36,5 +36,7 @@ def create_app(test_config=None):
     app.register_blueprint(monitoring.bp)
     app.add_url_rule('/', endpoint='index')
     
+    from . import ssl_check
 
     return app
+
