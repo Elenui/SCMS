@@ -25,14 +25,16 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/')
-    def index():
-        return render_template('index.html')
 
     from . import db
     db.init_app(app)
 
     from . import auth
     app.register_blueprint(auth.bp)
+
+    from . import monitoring
+    app.register_blueprint(monitoring.bp)
+    app.add_url_rule('/', endpoint='index')
+    
 
     return app

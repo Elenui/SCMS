@@ -29,8 +29,8 @@
  <ul class="sidebar-menu">
      <li><a href="/"><span class="mif-home icon"></span>Home</a></li>
      {% if g.user %}
-        <li><a href="{{ url_for('monitoring.create')}}"><span class="mif-windows icon"></span>Add URL</a></li>
-        <li><a href="{{ url_for('auth.logout') }}"><span class="mif-cross icon"></span>Logout</a></li>
+     <li><a href="{{ url_for('monitoring.create')}}"><span class="mif-windows icon"></span>Add URL</a></li>
+     <li><a href="{{ url_for('auth.logout') }}"><span class="mif-cross icon"></span>Logout</a></li>
      {% else %}
         <li><a href="{{ url_for('auth.login') }}"><span class="mif-user-secret icon"></span>Login</a></li>
         <li><a href="{{ url_for('auth.register') }}"><span class="mif-user-plus icon"></span>Register</a></li>
@@ -57,8 +57,8 @@
       <tbody>
       {% for website in websites %}
       <tr>
-          <td> {{ post['web_url'] }}</td>
-          <td> OK </td>
+          <td> {{ website['web_url'] }}</td>
+          <td> {{ test_host(website['web_url']) }} </td>
           <td>To do</td>
       </tr>
       {% endfor %}
