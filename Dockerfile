@@ -9,7 +9,6 @@ RUN apt-get update \
 
 COPY app/* ./
 
-RUN pip install -e . 
-RUN flask init-db
+RUN pip install -e . && flask init-db
 EXPOSE 8080 
 CMD ["waitress-serve", "--call", "'flaskr:create_app'"]
