@@ -3,6 +3,7 @@ import sqlite3
 import click
 from flask import current_app, g
 from flask.cli import with_appcontext
+import pymysql
 
 
 def get_db():
@@ -12,7 +13,7 @@ def get_db():
             detect_types=sqlite3.PARSE_DECLTYPES
         )
         g.db.row_factory = sqlite3.Row
-
+        #g.db = pymysql.connect("localhost","pythondev","pythondev","mescouilles" )
     return g.db
 
 

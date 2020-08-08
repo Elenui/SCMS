@@ -2,3 +2,4 @@ __pycache__
 instance
 venv
 flaskr.egg-info
+azure-pipelines.yml

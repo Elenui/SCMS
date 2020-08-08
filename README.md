@@ -11,5 +11,6 @@ The source code is not the prettiest possible just like the front page.
 Git clone the project.
 Go into app directory. 
 pip install -e . 
+flasks init-db 
 
 waitress-serve --call 'flaskr:create_app'

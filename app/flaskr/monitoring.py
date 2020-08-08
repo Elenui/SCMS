@@ -32,7 +32,6 @@ def index():
         # parse the string from the certificate into a Python datetime object
         res = datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
         dayremaining = res - datetime.datetime.utcnow()
-        print(website[0])
         if dayremaining < datetime.timedelta(days=15):
             status_url = False
             websites[website[0]] =  "alert"
