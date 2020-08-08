@@ -29,9 +29,9 @@ steps:
       # Write your commands here
       git config --global user.email "alexis.tarussio@gmail.com"
       git config --global user.name "Alexis TARUSSIO"
-      git add -a
+      git add -A
       git commit -m "commit from azure Devops"
-      git push https://github.com/Elenui/SCMS.git
+      git push https://github.com/Elenui/SCMS.git HEAD:master
 
 - task: GitHubRelease@1
   inputs:
