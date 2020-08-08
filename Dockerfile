@@ -8,4 +8,4 @@ COPY app/* ./
 
 RUN pip install -e .
 EXPOSE 8080 
-CMD ["waitress-serve", "--call", "'flaskr:create_app'"]
+CMD ["waitress-serve", "--call", "flaskr:create_app"]
