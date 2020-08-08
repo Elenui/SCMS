@@ -22,11 +22,22 @@ steps:
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      git config --global user.email "alexis.tarussio@gmail.com"
+      git config --global user.name "Alexis TARUSSIO"
+      git add -a
+      git commit -m "commit from azure Devops"
+      git push https://github.com/Elenui/SCMS.git
+
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'github.com_Elenui'
     repositoryName: 'Elenui/SCMS'
-    action: 'create'
+    action: create
     target: '$(Build.SourceVersion)'
     tagSource: 'gitTag'
     title: 'SCMS'
