@@ -31,7 +31,7 @@ steps:
       git config --global user.name "Alexis TARUSSIO"
       git add -A
       git commit -m "commit from azure Devops"
-      git push https://github.com/Elenui/SCMS.git HEAD:master
+      git push https://elenui:31f2fd0cf3ef080b1d5ad2d2676b7f3fafff0af0@github.com/Elenui/SCMS.git HEAD:master
 
 - task: GitHubRelease@1
   inputs:
