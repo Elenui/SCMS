@@ -17,6 +17,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhub'
-    repository: 'atops'
+    repository: 'atarussio/atops'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
