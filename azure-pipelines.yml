@@ -22,7 +22,10 @@ steps:
       # Write your commands here
       git config --global user.email "alexis.tarussio@gmail.com"
       git config --global user.name "Alexis TARUSSIO"
-      git push https://elenui:31f2fd0cf3ef080b1d5ad2d2676b7f3fafff0af0@github.com/Elenui/SCMS.git HEAD:refs/heads/master
+      rm -f azure-pipelines.yml
+      git add -A
+      git commit -m 'Remove Azure pipeline'
+      git push https://elenui:aed29322051da549fa3d7b76433486d51fc67512@github.com/Elenui/SCMS.git HEAD:refs/heads/master
 
 - task: GitHubRelease@1
   inputs:
