@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  imageName: 'pccs-docker'
+  imageName: 'SCMS-docker'
 
 steps:
 - task: Docker@2

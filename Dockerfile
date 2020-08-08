@@ -2,7 +2,7 @@ FROM "python:3.7-stretch"
 
 MAINTAINER Alexis TARUSSIO <alexis.tarussio@gmail.com>
 
-WORKDIR /PCCS
+WORKDIR /SCMS
 
 COPY app/* ./
 
