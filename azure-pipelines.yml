@@ -13,9 +13,10 @@ variables:
   imageName: 'SCMS-docker'
 
 steps:
+
 - task: Docker@2
-  displayName: Build an image
   inputs:
-    repository: $(imageName)
-    command: build
-    Dockerfile: Dockerfile
+    containerRegistry: 'dockerhub'
+    repository: 'atarussio/atops'
+    command: 'buildAndPush'
+    Dockerfile: 'Dockerfile'
