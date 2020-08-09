@@ -4,7 +4,7 @@ MAINTAINER Alexis TARUSSIO <alexis.tarussio@gmail.com>
 
 WORKDIR /SCMS
 
-COPY app/* ./
+COPY app/ /SCMS
 RUN pip install -e .
 RUN ls -ltra && sleep 10
 EXPOSE 8080 
