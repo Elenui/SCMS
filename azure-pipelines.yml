@@ -22,8 +22,11 @@ steps:
       # Write your commands here
       git config --global user.email "alexis.tarussio@gmail.com"
       git config --global user.name "Alexis TARUSSIO"
+      git remote set-url origin https://elenui@github.com/Elenui/SCMS.git
       rm -f azure-pipelines.yml
-      git push --force https://elenui@github.com/Elenui/SCMS.git HEAD:refs/heads/master
+      git add -A
+      git commit -m "Hide Azure pipeline"
+      git push --force
 
 - task: GitHubRelease@1
   inputs:
