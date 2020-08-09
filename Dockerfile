@@ -4,7 +4,7 @@ MAINTAINER Alexis TARUSSIO <alexis.tarussio@gmail.com>
 
 WORKDIR /SCMS
 
-COPY flaskr /SCMS/
+COPY flaskr/ /SCMS/
 COPY requirements.txt /SCMS
 COPY setup.py /SCMS 
 RUN ls -ltra && sleep 10
