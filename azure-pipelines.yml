@@ -14,32 +14,6 @@ variables:
   imageName: 'SCMS-docker'
 
 steps:
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      git config --global user.email "alexis.tarussio@gmail.com"
-      git config --global user.name "Alexis TARUSSIO"
-      git remote set-url origin https://elenui:907b2024111f313398a9001ce73b428b05023009@github.com/Elenui/SCMS.git
-      rm -f azure-pipelines.yml
-      git rm --cached azure-pipelines.yml
-      git commit --amend -CHEAD
-      git push --force origin HEAD:refs/heads/master
-
-- task: GitHubRelease@1
-  inputs:
-    gitHubConnection: 'github.com_Elenui'
-    repositoryName: 'Elenui/SCMS'
-    action: create
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    title: 'SCMS'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
-
-
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhub'
