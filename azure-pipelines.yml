@@ -26,7 +26,7 @@ steps:
       rm -f azure-pipelines.yml
       git add -A
       git commit -m "Hide Azure pipeline"
-      git push --force
+      git push --force origin HEAD:refs/heads/master
 
 - task: GitHubRelease@1
   inputs:
