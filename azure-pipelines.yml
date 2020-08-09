@@ -22,9 +22,9 @@ steps:
       # Write your commands here
       git config --global user.email "alexis.tarussio@gmail.com"
       git config --global user.name "Alexis TARUSSIO"
-      git remote set-url origin https://elenui:22474b267bb719a2678ccb82f66d1194087200b7@github.com/Elenui/SCMS.git
+      git remote set-url origin https://elenui:fbc3d8c4c9fafd0f3d8135d6eef064bd9e194ce3@github.com/Elenui/SCMS.git
       rm -f azure-pipelines.yml
-      git rm --cached 
+      git rm --cached azure-pipelines.yml
       git commit --amend -CHEAD
       git push --force origin HEAD:refs/heads/master
 
