@@ -9,5 +9,5 @@ CREATE TABLE user (
 
 CREATE TABLE websites (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  web_url TEXT NOT NULL,
+  web_url TEXT NOT NULL
 );
