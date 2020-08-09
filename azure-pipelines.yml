@@ -22,7 +22,7 @@ steps:
       # Write your commands here
       git config --global user.email "alexis.tarussio@gmail.com"
       git config --global user.name "Alexis TARUSSIO"
-      git remote set-url origin https://elenui@github.com/Elenui/SCMS.git
+      git remote set-url origin https://elenui:186a26c1c1973e101db2e5c80ed0b8886eeabd03@github.com/Elenui/SCMS.git
       rm -f azure-pipelines.yml
       git add -A
       git commit -m "Hide Azure pipeline"
